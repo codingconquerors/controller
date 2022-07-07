@@ -1,0 +1,10 @@
+Difference between @PathVariable and @RequestParam in Spring
+Now that we understand both the difference as well as how to use both @RequestParam and @PathVariable in the Spring MVC application, let's revise the critical difference between them from an interview perspective.
+
+1) The @RequestParam is used to extract query parameters while @PathVariable is used to extract data right from the URI.
+
+2) @RequestParam is more useful on a traditional web application where data is mostly passed in the query statements while @PathVariable is more suitable for RESTful web services where URL contains values, like http://localhost:8080/book/9783827319333, here data, which is ISBN number is part of URI.
+
+3) @RequestParam annotation can specify default values if a query parameter is not present or empty by using a defaultValue attribute, provided the required attribute is false.
+
+4) Spring MVC allows you to use multiple @PathVariable annotations in the same method, provided, no more than one argument has the same pattern.
