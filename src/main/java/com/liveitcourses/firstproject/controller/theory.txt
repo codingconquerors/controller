@@ -8,3 +8,6 @@ Now that we understand both the difference as well as how to use both @RequestPa
 3) @RequestParam annotation can specify default values if a query parameter is not present or empty by using a defaultValue attribute, provided the required attribute is false.
 
 4) Spring MVC allows you to use multiple @PathVariable annotations in the same method, provided, no more than one argument has the same pattern.
+
+=====================================================================================================================================
+
