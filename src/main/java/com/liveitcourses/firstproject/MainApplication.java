@@ -1,4 +1,4 @@
-package com.liveitcourses.firstproject.controller;
+package com.liveitcourses.firstproject;
 
 import lombok.extern.log4j.Log4j2;
 import org.springframework.boot.SpringApplication;

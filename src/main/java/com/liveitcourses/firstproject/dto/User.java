@@ -1,5 +1,7 @@
 package com.liveitcourses.firstproject.dto;
 
+import org.springframework.context.annotation.Bean;
+
 import java.util.Date;
 
 public class User {

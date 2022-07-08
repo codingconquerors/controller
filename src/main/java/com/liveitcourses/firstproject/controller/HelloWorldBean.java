@@ -1,5 +1,11 @@
 package com.liveitcourses.firstproject.controller;
 
+// model classes
+// pojo plain old java objects
+// DTO data transfer objects
+// domain object
+// Entities
+// DAO
 public class HelloWorldBean {
 
     private String message;
