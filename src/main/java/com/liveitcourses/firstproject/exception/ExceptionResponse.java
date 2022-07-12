@@ -3,9 +3,9 @@ package com.liveitcourses.firstproject.exception;
 import java.util.Date;
 
 public class ExceptionResponse {
-    private Date timestamp;
-    private String message;
-    private String details;
+    private Date timestamp; // current time when exception is raised
+    private String message; // passing inside exception
+    private String details; // other details
 
     public ExceptionResponse(Date timestamp, String message, String details) {
         super();
