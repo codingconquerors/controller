@@ -11,4 +11,18 @@ Now that we understand both the difference as well as how to use both @RequestPa
 
 =====================================================================================================================================
 
-2.
+2. HATEOS
+
+The Spring HATEOAS project is a library of APIs that we can use to easily create REST representations that follow the principle of HATEOAS
+(Hypertext as the Engine of Application State).
+
+Generally speaking, the principle implies that the API should guide the client through the application by returning relevant information about
+ the next potential steps, along with each response.
+
+
+ 3. VALIDATION
+
+ a. Add spring boot starter validation dep. inside build.gradle. Load the gradle changes.
+ b. Open the object class eg User in our and put some validation on the required fields.
+ c. Integrate object level validations within our controller classes.
+ d. Override handleMethodArgumentNotValid() and return your exception class response along with getBindingResults().toString.
