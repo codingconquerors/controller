@@ -26,3 +26,21 @@ Generally speaking, the principle implies that the API should guide the client t
  b. Open the object class eg User in our and put some validation on the required fields.
  c. Integrate object level validations within our controller classes.
  d. Override handleMethodArgumentNotValid() and return your exception class response along with getBindingResults().toString.
+
+
+4. Swagger implementation
+
+For providing documentation for our apis.
+
+OpenAPI is a specification and Swagger provides tools for implementing that specification.
+
+http://localhost:8080/swagger-ui/index.html
+
+5. Actuator
+Spring Boot Actuator is a sub-project of the Spring Boot Framework. It uses HTTP endpoints to expose operational information
+ about any running application. The main benefit of using this library is that we get health and monitoring metrics from
+ production-ready applications. Auditing, health, and metrics gathering can also be automatically applied to your application.
+
+http://localhost:8080/actuator
+
+management.endpoints.web.exposure.include=*
