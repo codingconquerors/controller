@@ -1,12 +1,15 @@
 package com.liveitcourses.firstproject.controller;
 
 import java.util.List;
+import java.util.Locale;
 
 import com.liveitcourses.firstproject.dto.User;
 import com.liveitcourses.firstproject.exception.UserNotFoundException;
 import com.liveitcourses.firstproject.service.UserDaoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
+import org.springframework.context.MessageSourceResolvable;
+import org.springframework.context.NoSuchMessageException;
 import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;
@@ -39,6 +42,7 @@ public class UserController {
     public EntityModel<User> retrieveUserWithHateOS(@PathVariable int id) {
 
         User user =  service.findOne(id);
+
         EntityModel<User> model = EntityModel.of(user);
 
         WebMvcLinkBuilder linkToUsers = linkTo(methodOn(this.getClass()).retrieveAllUsers());
@@ -65,7 +69,7 @@ public class UserController {
 
     @GetMapping(path = "/i18l")
     public String internationalization() {
-        return messageSource.getMessage("good.morning.message", null,
+        return messageSource.getMessage("good.morning.message", null,"default messages",
                 LocaleContextHolder.getLocale());
     }
 
