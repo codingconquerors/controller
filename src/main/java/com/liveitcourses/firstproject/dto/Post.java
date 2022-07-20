@@ -11,11 +11,16 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 @Entity
 public class Post {
 
+    // primary key column
     @Id
     @GeneratedValue
     private Integer id;
+
     private String description;
 
+    // Many means post objects
+    // one means single user object
+    // multiple posts can be posted by a single user
     @ManyToOne(fetch = FetchType.LAZY)
     @JsonIgnore
     private User user;

@@ -2,10 +2,12 @@ package com.liveitcourses.firstproject.dto;
 
 import org.springframework.context.annotation.Bean;
 
+import javax.persistence.OneToMany;
 import javax.validation.constraints.*;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -31,6 +33,14 @@ public class User {
     @Past
     @ApiModelProperty(notes = "Birth date should be in the past")
     private Date birthDate;
+
+    // one is user
+    // many are posts
+    // one user to many posts
+    // one user = current class object
+    // many posts = List of posts
+    @OneToMany(mappedBy="user")
+    private List<Post> posts;
 
     protected User() {
 
@@ -65,6 +75,14 @@ public class User {
 
     public void setBirthDate(Date birthDate) {
         this.birthDate = birthDate;
+    }
+
+    public List<Post> getPosts() {
+        return posts;
+    }
+
+    public void setPosts(List<Post> posts) {
+        this.posts = posts;
     }
 
     @Override
